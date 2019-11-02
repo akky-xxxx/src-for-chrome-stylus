@@ -1,0 +1,18 @@
+@mixin hover {
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.7;
+    text-decoration: none;
+  }
+}
+
+@mixin label($bgColor, $textColor) {
+  background-color: $bgColor;
+  border-radius: 14px;
+  color: $textColor !important;
+  display: inline-block;
+  padding: 3px 9px;
+
+  @include hover();
+}
